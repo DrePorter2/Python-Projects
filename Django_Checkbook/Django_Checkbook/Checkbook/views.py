@@ -17,7 +17,7 @@ def create_account(request):
     if request.method == 'POST':
         if form.is_valid():
             form.save()
-            return redirect()
+            return redirect('index')
     content = {'form': form}
     return render(request, 'checkbook/CreateNewAccount.html', content)
 
